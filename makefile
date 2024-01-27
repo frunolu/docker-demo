@@ -12,4 +12,4 @@ cache-clean:
 
 start-project: up composer-install
 
-
+# docker exec -it --user www-data _php_1 bash
