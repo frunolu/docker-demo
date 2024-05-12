@@ -8,18 +8,14 @@ It is necessary to have the ports `80`, `8080`, and `3306` available (if they ar
 If everything goes well, the following output will be displayed in the terminal:
 
 ```bash
-make start-project
+make up
 docker-compose up -d --build --force-recreate --remove-orphans
 Building php
 Recreating docker-demo_db_1 ... done
 Recreating docker-demo_adminer_1 ... done
 Recreating docker-demo_php_1     ... done
 Recreating docker-demo_web_1     ... done
-docker-compose exec php su --command="composer -n install --prefer-dist" www-data
-Installing dependencies from lock file (including require-dev)
-Verifying lock file contents can be installed on current platform.
-Generating autoload files
-@stats:{cmd:"make start-project" sys:0.31s usr:1.93s cpu:19% wall:11.638s mem:43k}
+@stats:{cmd:"make up" sys:0.31s usr:1.93s cpu:19% wall:11.638s mem:43k}
 ```
 
 If an error occurs, it is necessary to identify the cause and resolve it.
